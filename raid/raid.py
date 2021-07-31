@@ -11,6 +11,8 @@ def randomSpecialMove():
         if number > 6:
             pyautogui.press('r')
             print('Used Special Move')
+            time.sleep(3)
+            pyautogui.press('r')
 
 
 
@@ -34,8 +36,8 @@ try:
             if lable == 'SKip Friends':
                 isFightScene = False
 
-            if lable == 'Room Closed':
-                searchAgain()
+            # if lable == 'Room Closed':
+            #     searchAgain()
 
         elif lable == 'Select Room':
             searchAgain()
