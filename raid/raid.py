@@ -21,6 +21,7 @@ try:
 
 
     def findAndClick(image, cond, lable):
+        # print('Searching for ' + lable)
         imageLocation = pyautogui.locateOnScreen(image, confidence=cond)
         if imageLocation is not None:
             print('Click Image "' + lable + '" at ' + str(imageLocation))
@@ -39,13 +40,20 @@ try:
             # if lable == 'Room Closed':
             #     searchAgain()
 
-        elif lable == 'Select Room':
-            searchAgain()
+        if lable == 'Select Room' and imageLocation is None:
+            search = pyautogui.locateOnScreen('search-again.png', 0.8)
+            if search is not None:
+                pyautogui.click(search)
+                time.sleep(1)
+                pyautogui.click(pyautogui.locateOnScreen('okable.png', 0.7))
+                print('no room')
 
 
     def searchAgain():
         findAndClick('search-again.png', 0.8, 'Search Again')
-        time.sleep(3)
+        time.sleep(1)
+        findAndClick('okable.png', 0.7, 'Select Room')
+
 
     def restorePosition():
         pyautogui.moveTo(cur_mouse)
@@ -57,19 +65,20 @@ try:
             break
 
         # Resolution Windows 1024x576
-        findAndClick('main-btn.png', 0.7, 'Jidanbo Raid')
-        findAndClick('hard-mode.png', 0.7, 'Select Hard')
+        findAndClick('main-btn.png', 0.85, 'Jidanbo Raid')
+        findAndClick('hard-mode.png', 0.85, 'Select Hard')
         findAndClick('join.png', 0.8, 'Join Rooms')
         findAndClick('okable.png', 0.7, 'Select Room')
         findAndClick('ready.png', 0.7, 'Ready')
         findAndClick('fight-auto.png', 0.9, 'Fight Auto')
-        findAndClick('friends.png', 0.75, 'SKip Friends')
+        findAndClick('friends.png', 0.6, 'SKip Friends')
         findAndClick('retry.png', 0.8, 'Retry')
         findAndClick('room-closed.png', 0.8, 'Room Closed')
         findAndClick('revive.png', 0.8, 'Revive')
+        findAndClick('red-retry.png', 0.85, 'Red Retry')
 
         randomSpecialMove()
 
-        time.sleep(0.1)
+        time.sleep(0.4)
 except KeyboardInterrupt:
     print('\n')

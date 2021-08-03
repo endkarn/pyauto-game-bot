@@ -6,10 +6,10 @@ try:
     cur_mouse = pyautogui.position()
 
 
-    def findAndClick(image, cond, lable):
+    def findAndClick(image, cond, label):
         imageLocation = pyautogui.locateOnScreen(image, confidence=cond)
         if imageLocation is not None:
-            print('Click Image "' + lable + '" at ' + str(imageLocation))
+            print('Click Image "' + label + '" at ' + str(imageLocation))
             global cur_mouse
             cur_mouse = pyautogui.position()
             pyautogui.click(imageLocation)
@@ -45,7 +45,7 @@ try:
         clickNextInFooter()
         findAndClick('close.png', 0.8, 'Close Reward')
 
-        time.sleep(0.2)
+        time.sleep(0.5)
 
 except KeyboardInterrupt:
     print('\n')
