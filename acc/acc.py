@@ -25,7 +25,7 @@ try:
             clickpos = pyautogui.center(evolve)
 
             pyautogui.click(clickpos)
-            pyautogui.click(x=(clickpos.x+250), y=(clickpos.y-255)) #select acc
+            pyautogui.click(x=(clickpos.x+250), y=(clickpos.y-255)) #select #1 acc
             pyautogui.click(x=clickpos.x, y=(clickpos.y+75)) #upgrade with cost
 
             okbtn = pyautogui.locateOnScreen('sm-ok.png', 0.8)
@@ -33,6 +33,14 @@ try:
             pyautogui.click(okbtn)
             time.sleep(1)
             pyautogui.click(x=okpos.x, y=(okpos.y+130))
+            time.sleep(2)
+            pyautogui.click(x=(clickpos.x + 250), y=(clickpos.y - 255))
+            time.sleep(1)
+            pyautogui.click(x=(clickpos.x + 250), y=(clickpos.y - 255))
+            time.sleep(0.1)
+            pyautogui.click(x=(clickpos.x + 250), y=(clickpos.y - 255))
+            # time.sleep(1)
+            # pyautogui.click(x=(clickpos.x + 250), y=(clickpos.y - 255))
 
             # pyautogui.click(x=(clickpos.x + 250), y=(clickpos.y - 255))
             # pyautogui.click(x=(clickpos.x + 250), y=(clickpos.y - 255))

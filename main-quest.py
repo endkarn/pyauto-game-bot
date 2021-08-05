@@ -47,7 +47,7 @@ try:
         findAndClick('ticket.png', 0.7, 'Start with Ticket')
         findAndClick('skip.png', 0.6, 'Skip')
         findAndClick('clear.png', 0.5, 'Quest Cleared')
-        findAndClick('next.png', 0.75, 'Next Quest')
+        findAndClick('next.png', 0.85, 'Next Quest')
         findAndClick('close.png', 0.8, 'Close Reward')
 
         time.sleep(0.05)
