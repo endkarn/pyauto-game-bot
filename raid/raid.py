@@ -65,19 +65,37 @@ try:
             break
 
         # Resolution Windows 1024x576
-        findAndClick('main-btn.png', 0.85, 'Jidanbo Raid')
-        findAndClick('hard-mode.png', 0.85, 'Select Hard')
-        findAndClick('join.png', 0.8, 'Join Rooms')
+        # findAndClick('main-btn.png', 0.85, 'Jidanbo Raid')
+        # findAndClick('hard-mode.png', 0.85, 'Select Hard')
+        # findAndClick('join.png', 0.8, 'Join Rooms')
+        # findAndClick('okable.png', 0.7, 'Select Room')
+        # findAndClick('ready.png', 0.7, 'Ready')
+        # findAndClick('fight-auto.png', 0.9, 'Fight Auto')
+        # findAndClick('friends.png', 0.6, 'SKip Friends')
+        # findAndClick('retry.png', 0.8, 'Retry')
+        # findAndClick('room-closed.png', 0.8, 'Room Closed')
+        # findAndClick('revive.png', 0.8, 'Revive')
+        # findAndClick('red-retry.png', 0.85, 'Red Retry')
+
+        findAndClick('coop-title.png', 0.85, 'Coop Title')
+        findAndClick('select-quest.png', 0.85, 'Select Quest')
+
+        # findAndClick('hard-mode.png', 0.85, 'Select Hard')
+        findAndClick('join-coop.png', 0.8, 'Join Rooms')
         findAndClick('okable.png', 0.7, 'Select Room')
-        findAndClick('ready.png', 0.7, 'Ready')
-        findAndClick('fight-auto.png', 0.9, 'Fight Auto')
+        findAndClick('active5x.png', 0.9, 'Active 5X')
+        findAndClick('ready5x.png', 0.85, 'Active 5X')
+        # findAndClick('ready.png', 0.7, 'Ready')
+        findAndClick('fight-autov2.png', 0.85, 'Fight Auto')
         findAndClick('friends.png', 0.6, 'SKip Friends')
-        findAndClick('retry.png', 0.8, 'Retry')
+        findAndClick('tap-screen.png', 0.6, 'Tap Screen')
+        findAndClick('result-screen.png', 0.8, 'Result Screen')
+        findAndClick('retry-sm.png', 0.8, 'Retry')
         findAndClick('room-closed.png', 0.8, 'Room Closed')
         findAndClick('revive.png', 0.8, 'Revive')
         findAndClick('red-retry.png', 0.85, 'Red Retry')
 
-        randomSpecialMove()
+        # randomSpecialMove()
 
         time.sleep(0.4)
 except KeyboardInterrupt:
