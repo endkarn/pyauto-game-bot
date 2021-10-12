@@ -48,6 +48,7 @@ try:
             print('Fish : ' + str(counterFish) + ' ' + str(datetime.datetime.now()))
 
         findAndClick('closeall.png', 0.8, 'Close')
+        findAndClick('close.png', 0.8, 'Close')
 
 
         time.sleep(0.05)
