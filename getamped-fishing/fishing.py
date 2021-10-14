@@ -38,7 +38,7 @@ try:
             break
 
         # Resolution Windows 1024x576
-        if findAndClick('gotcha.png', 0.8, 'Get Fish'):
+        if findAndClick('gotcha.png', 0.8, 'Get Fish') or findAndClick('mining.png', 0.8, 'Mined'):
             counterFish = counterFish + 1
             time.sleep(1)
             findAndClick('tradeall.png', 0.8, 'Trade')
