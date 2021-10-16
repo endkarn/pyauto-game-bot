@@ -15,6 +15,7 @@ try:
             global cur_mouse
             cur_mouse = pyautogui.position()
             clickPos = pyautogui.center(imageLocation)
+            # pydirectinput.click(clickPos.x, clickPos.y)
             pyautogui.moveTo(clickPos)
             pyautogui.mouseDown()
             pyautogui.mouseUp()
@@ -36,17 +37,7 @@ try:
             break
 
         # Resolution Windows 1024x576
-        if findAndClick('gotcha.png', 0.8, 'Get Fish') or findAndClick('mining.png', 0.8, 'Mined'):
-            counterFish = counterFish + 1
-            time.sleep(1)
-            findAndClick('tradeall.png', 0.8, 'Trade')
-            time.sleep(1)
-            findAndClick('confirm.png', 0.8, 'Confirm')
-            time.sleep(1)
-            print('Fish : ' + str(counterFish) + ' ' + str(datetime.datetime.now()))
-
-        findAndClick('closeall.png', 0.8, 'Close')
-        findAndClick('close.png', 0.8, 'Close')
+        findAndClick('ready.png', 0.8, 'Ready')
 
 
         time.sleep(0.05)
